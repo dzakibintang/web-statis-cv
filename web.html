@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selamat Datang di CV Fardan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        section {
+            background: #fff;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #2c3e50;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+        .foto-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        img {
+            max-width: 150px;
+            border-radius: 50%;
+            display: block;
+            margin: 10px auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Selamat Datang di CV Dzaki</h1>
+        <h2>Nama: DZAKI BINTANG HARDIANSYAH</h2>
+        <p>Email: dzakinations08@gmail.com</p>
+        <p>Telepon: 085852046273</p>
+    </header>
+
+    <div class="foto-container">
+        <h2>Upload Foto Profil</h2>
+        <input type="file" id="upload-foto" accept="image/*" onchange="previewFoto(event)">
+        <img id="foto-profil" src="fardan.jpg" alt="Foto Profil" style="display:none;">
+    </div>
+
+    <main>
+        <section id="pendidikan">
+            <h2>Pendidikan</h2>
+            <ul>
+                <li>2020 - LULUS SD di SDN 03 SEDAYU</li>
+                <li>2023 - LULUS SMP di MtsN 1 MALANG</li>
+                <li>Sekarang - SMK di SMK TELKOM MALANG</li>
+            </ul>
+        </section>
+
+        <section id="pengalaman">
+            <h2>Kegiatan Ekstrakulikuler</h2>
+            <ul>
+                <li>Nama Kegiatan : Basket</li>
+                <li>Deskripsi : Saya rajin mengikuti ekstrakulikuler Basket</li>
+            </ul>
+        </section>
+
+        <section id="keterampilan">
+            <h2>Keterampilan</h2>
+            <ul>
+                <li>Saya ahli di bidang pemograman</li>
+                <li>Saya ahli di bidang olahraga terutama basket</li>
+            </ul>
+        </section>
+
+        <section id="tentang-saya">
+            <h2>Tentang Saya</h2>
+            <p>Saya sekarang bersekolah di SMK TELKOM MALANG saya mengambil jurusan Rekayasa Perangkat Lunak</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Dzaki Bintang Hardiansyah</p>
+    </footer>
+
+    <script>
+        function previewFoto(event) {
+            const foto = document.getElementById('foto-profil');
+            foto.src = URL.createObjectURL(event.target.files[0]);
+            foto.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
